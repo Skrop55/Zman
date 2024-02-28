@@ -44,6 +44,6 @@ public class AllUsersActivity extends AppCompatActivity implements AdapterView.O
         Intent intent = new Intent(AllUsersActivity.this, UpdateUser.class);
         intent.putExtra("rowId", u.getId());
         startActivity(intent);
-        return false;
+        //return false;
     }
 }
