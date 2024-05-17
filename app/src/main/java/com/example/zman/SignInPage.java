@@ -77,7 +77,7 @@ public class SignInPage extends AppCompatActivity implements View.OnClickListene
                 uh1.open();
                 uh1.createUser(u1);
                 uh1.close();
-                Intent intent = new Intent(this, AllUsersActivity.class);
+                Intent intent = new Intent(this, TaskList.class);
                 startActivity(intent);
             }
 

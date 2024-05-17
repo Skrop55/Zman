@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.zman.UserHelper.AllUsersActivity;
 import com.example.zman.UserHelper.User;
 import com.example.zman.UserHelper.UserOpenHelper;
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if(view == btnSignIn) {
-            Intent intent = new Intent(this, SignInPage.class);
+            Intent intent = new Intent(this, AllUsersActivity.class);
             startActivity(intent);
         }
 

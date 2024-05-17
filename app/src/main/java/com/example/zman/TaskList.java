@@ -47,7 +47,7 @@ public class TaskList extends AppCompatActivity implements View.OnClickListener,
     public void notification() {
         String notiTitle="This is a notification for you";
         String notiText="Click here to open Activity2";
-        Intent intent=new Intent(this, AllUsersActivity.class);
+        Intent intent=new Intent(this, Tasks.class);
         Globals.makeNotification(this, intent, notiTitle, notiText);
     }
 
