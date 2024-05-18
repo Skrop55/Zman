@@ -34,10 +34,13 @@ public class About extends AppCompatActivity {
                 switch(tab.getPosition()) {
                     case 0:
                         fragment = new AboutUs();
+                        break;
                     case 1:
                         fragment = new AboutHealth();
+                        break;
                     case 2:
                         fragment = new AboutTime();
+                        break;
                 }
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment)

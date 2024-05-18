@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.MenuItem;
@@ -18,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HomePage extends AppCompatActivity implements View.OnClickListener, NavigationBarView.OnItemSelectedListener {
-    Button btnSkill, btnVibrate, pomodoro;
+    Button btnSkill, btnVibrate, pomodoro, preference, exit;
     BottomNavigationView nav;
     Vibrator vbr;
 
@@ -27,11 +28,17 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        preference = findViewById(R.id.btnPreference);
+        preference.setOnClickListener(this);
+
         pomodoro = findViewById(R.id.pomodoro);
         pomodoro.setOnClickListener(this);
 
-        btnSkill = findViewById(R.id.btnSkill1);
+        btnSkill = findViewById(R.id.btnskill1);
         btnSkill.setOnClickListener(this);
+
+        exit = findViewById(R.id.btnLogOut);
+        exit.setOnClickListener(this);
 
         btnVibrate = findViewById(R.id.btnVibrate);
         btnVibrate.setOnClickListener(this);
@@ -64,7 +71,15 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
         }
 
         if(view == pomodoro) {
-            Intent intent = new Intent(this, PomodoroTimer.class);
+            Intent intent = new Intent(this,PomodoroTimer.class);
+            startActivity(intent);
+        }
+
+        if(view == exit)
+            finish();
+
+        if(view == preference) {
+            Intent intent = new Intent(this,Preference.class);
             startActivity(intent);
         }
     }
@@ -80,7 +95,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
             startActivity(intent);
         }
         else if(item.getItemId() == R.id.calendar) {
-            Intent intent = new Intent(this, Calendar.class);
+            Uri uri = Uri.parse("https://calendar.google.com");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         }
         return false;

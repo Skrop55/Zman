@@ -41,7 +41,7 @@ public class UpdateUser extends AppCompatActivity implements View.OnClickListene
         dialog.setCancelable(true);
         dialog.setContentView(R.layout.delete_dialog);
 
-        Button submitButton = dialog.findViewById(R.id.Sure);
+        Button submitButton = dialog.findViewById(R.id.sure);
 
         submitButton.setOnClickListener(this);
         submitButton.setOnClickListener(new View.OnClickListener() {

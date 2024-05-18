@@ -7,11 +7,17 @@
     android:background="@drawable/background"
     tools:context=".HomePage">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/header"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="481dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="580dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dialog_background" />
 
     <TextView
         android:id="@+id/quote5"
@@ -26,34 +32,84 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.845" />
 
     <TextView
         android:id="@+id/quote3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home page!"
+        android:text="Home Page!"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24dp"
+        android:textSize="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <Button
-        android:id="@+id/btnSkill1"
+        android:id="@+id/btnskill1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Skill Issues"
+        android:text="Skills"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="236dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Log Out"
+        app:layout_constraintBottom_toTopOf="@+id/quote5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPreference"
         app:layout_constraintVertical_bias="0.591" />
+
+    <Button
+        android:id="@+id/btnPreference"
+        android:layout_width="236dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Preference"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pomodoro" />
+
+    <Button
+        android:id="@+id/btnVibrate"
+        android:layout_width="236dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="About Us"
+        app:layout_constraintBottom_toTopOf="@+id/pomodoro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.277" />
+
+    <Button
+        android:id="@+id/pomodoro"
+        android:layout_width="234dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#008B8B"
+        android:text="Pomodoro Timer"
+        app:layout_constraintBottom_toTopOf="@+id/btnPreference"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVibrate"
+        app:layout_constraintVertical_bias="0.386" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -71,36 +127,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/include"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <Button
-        android:id="@+id/btnVibrate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="About Us"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
-
-    <Button
-        android:id="@+id/pomodoro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#008B8B"
-        android:text="Pomodoro Timer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.385" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
