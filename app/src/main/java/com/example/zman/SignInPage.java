@@ -19,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.zman.Backend.IsCheck;
-import com.example.zman.UserHelper.AllUsersActivity;
 import com.example.zman.UserHelper.User;
 import com.example.zman.UserHelper.UserOpenHelper;
 
@@ -60,8 +59,7 @@ public class SignInPage extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if(view == btnBack2) { // back
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            finish();
         }
 
         String Email = etEmail2.getText().toString(); // is check implemented
@@ -77,7 +75,7 @@ public class SignInPage extends AppCompatActivity implements View.OnClickListene
                 uh1.open();
                 uh1.createUser(u1);
                 uh1.close();
-                Intent intent = new Intent(this, TaskList.class);
+                Intent intent = new Intent(this, HomePage.class);
                 startActivity(intent);
             }
 

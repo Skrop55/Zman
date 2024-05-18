@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.zman.UserHelper.AllUsersActivity;
-import com.example.zman.UserHelper.User;
 import com.example.zman.UserHelper.UserOpenHelper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -36,22 +34,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if(view == btnSignIn) {
-            Intent intent = new Intent(this, AllUsersActivity.class);
+            Intent intent = new Intent(this, SignInPage.class);
             startActivity(intent);
         }
 
         if(view == btnLogin) {
-            String email = etEmail.getText().toString();
-            String password = etPassword.getText().toString();
-            uh1.open();
-            User user = uh1.getUserbyEmail(email);
-            uh1.close();
-            if(user != null) {
-                Intent intent = new Intent(this, TaskList.class);
-                startActivity(intent);
-            } else {
-                // TODO: toast saying user not found
-            }
+            Intent intent = new Intent(this, HomePage.class);
+            startActivity(intent);
         }
     }
 }
