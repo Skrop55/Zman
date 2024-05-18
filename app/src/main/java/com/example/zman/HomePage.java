@@ -79,8 +79,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener,
             Intent intent = new Intent(this, Tasks.class);
             startActivity(intent);
         }
-        else if(item.getItemId() == R.id.tasks) {
-            Intent intent = new Intent(this, HomePage.class);
+        else if(item.getItemId() == R.id.calendar) {
+            Intent intent = new Intent(this, Calendar.class);
             startActivity(intent);
         }
         return false;

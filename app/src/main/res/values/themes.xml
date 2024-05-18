@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.Zman" parent="Base.Theme.Zman" />
+
+    <style name="Theme.CalendarAppExample" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
 </resources>

@@ -7,13 +7,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.media.MediaPlayer;
 import android.os.Build;
 
 import com.example.zman.R;
 
 public class Globals {
-    public static MediaPlayer mPlayer;
 
     public static void makeNotification(Context context, Intent intent, String notiTitle, String notiText)
     {
@@ -27,7 +25,7 @@ public class Globals {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
 
-            mChannel = new NotificationChannel(id, "channel Name",
+            mChannel = new NotificationChannel(id, "channel 1",
                     importance);
             mChannel.enableLights(true);
             mNotificationManager.createNotificationChannel(mChannel);
